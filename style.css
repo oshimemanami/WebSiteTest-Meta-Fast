@@ -1,0 +1,691 @@
+/* =============================
+   CSS変数・リセット
+============================= */
+:root {
+  --color-primary: #c8002d;
+  --color-gold: #b8960a;
+  --color-bg: #fff;
+  --color-text: #333;
+
+  /* スライダー専用変数 */
+  --slider-dot-color: #ccc;
+  --slider-dot-active: #c8002d;
+  --slider-transition: 0.35s ease;
+  --slider-border: 1px solid #ccc;
+
+  /* =============================
+     余白変数（ここを変えると一括変更）
+  ============================= */
+  --space-2:   2px;
+  --space-10:  10px;
+  --space-20:  20px;
+  --space-40:  40px;
+  --space-60:  60px;
+  --space-100: 100px;
+  --space-130: 130px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* =============================
+   ヒーロー・メタ画像共通
+============================= */
+.section-hero,
+.section-meta {
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  display: block;
+}
+
+.meta-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 0;
+}
+
+/* 最後の子はmargin不要 */
+.section-meta > *:last-child .meta-img,
+.section-meta > .meta-img:last-child {
+  margin-bottom: 0;
+}
+
+/* =============================
+   余白ユーティリティクラス
+   （変えたい時は:rootの変数を編集）
+============================= */
+.sp-0   { margin-bottom: 0; }
+.sp-2   { margin-bottom: var(--space-2); }
+.sp-10  { margin-bottom: var(--space-10); }
+.sp-20  { margin-bottom: var(--space-20); }
+.sp-40  { margin-bottom: var(--space-40); }
+.sp-60  { margin-bottom: var(--space-60); }
+.sp-80  { margin-bottom: 80px; }
+.sp-80  { margin-bottom: 80px; }
+.sp-100 { margin-bottom: var(--space-100); }
+.sp-130 { margin-bottom: var(--space-130); }
+
+.meta-link {
+  display: block;
+}
+
+/* sp-*クラスをimg以外の要素にも適用 */
+.btn-row.sp-0,   .meta-link.sp-0,   .section-slider.sp-0,
+.meta-gif-wrap.sp-0,   .faq-accordion.sp-0,   .meta-narrow.sp-0   { margin-bottom: 0; }
+
+.btn-row.sp-2,   .meta-link.sp-2,   .section-slider.sp-2,
+.meta-gif-wrap.sp-2,   .faq-accordion.sp-2,   .meta-narrow.sp-2   { margin-bottom: var(--space-2); }
+
+.btn-row.sp-10,  .meta-link.sp-10,  .section-slider.sp-10,
+.meta-gif-wrap.sp-10,  .faq-accordion.sp-10,  .meta-narrow.sp-10  { margin-bottom: var(--space-10); }
+
+.btn-row.sp-20,  .meta-link.sp-20,  .section-slider.sp-20,
+.meta-gif-wrap.sp-20,  .faq-accordion.sp-20,  .meta-narrow.sp-20  { margin-bottom: var(--space-20); }
+
+.btn-row.sp-40,  .meta-link.sp-40,  .section-slider.sp-40,
+.meta-gif-wrap.sp-40,  .faq-accordion.sp-40,  .meta-narrow.sp-40  { margin-bottom: var(--space-40); }
+
+.btn-row.sp-60,  .meta-link.sp-60,  .section-slider.sp-60,
+.meta-gif-wrap.sp-60,  .faq-accordion.sp-60,  .meta-narrow.sp-60  { margin-bottom: var(--space-60); }
+
+.btn-row.sp-100, .meta-link.sp-100, .section-slider.sp-100,
+.meta-gif-wrap.sp-100, .faq-accordion.sp-100, .meta-narrow.sp-80  { margin-bottom: 80px; }
+.sp-80  { margin-bottom: 80px; }
+.sp-100 { margin-bottom: var(--space-100); }
+
+.btn-row.sp-130, .meta-link.sp-130, .section-slider.sp-130,
+.meta-gif-wrap.sp-130, .faq-accordion.sp-130, .meta-narrow.sp-130 { margin-bottom: var(--space-130); }
+
+/* =============================
+   meta_15 重ね表示
+============================= */
+.meta-15-wrap {
+  position: relative;
+  width: calc(100% - 24px);
+  margin-left: 12px;
+  margin-right: 12px;
+  overflow: visible;
+}
+
+.meta-15b-link {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  display: block;
+}
+
+.meta-15b-img {
+  width: 100%;
+  display: block;
+}
+
+/* section-metaにもsp-*を適用 */
+.section-meta.sp-top-130 { margin-top: var(--space-130); }
+.section-meta.sp-130 { margin-top: var(--space-130); }
+
+.meta-05a-narrow,
+.meta-narrow {
+  display: block;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+}
+
+.meta-narrow > img,
+.meta-05a-narrow > img {
+  width: 100%;
+  display: block;
+}
+
+.meta-img-90 {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meta-img-90 {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =============================
+   フッターリンクエリア（meta_15a代替）
+============================= */
+.footer-links {
+  background: #e52344;
+  padding: 40px 20px 30px;
+  text-align: center;
+}
+
+.footer-link-item {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* フッターPC被り対策 */
+.fixed-footer-spacer {
+  height: 80px;
+}
+
+/* PC版meta_15b bottom */
+@media (min-width: 641px) {
+  .meta-15b-link {
+    bottom: 39px;
+  }
+}
+
+.footer-link-item:first-child {
+  border: none;
+}
+
+.footer-link-item:active {
+  opacity: 0.7;
+}
+
+.footer-info {
+  margin-top: 36px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: bold;
+}
+
+.footer-copyright {
+  margin-top: 24px;
+  color: #fff;
+  opacity: 1;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+/* =============================
+   ボタン横並び（meta_04a・04b）
+============================= */
+.btn-row {
+  display: flex;
+  width: 90%;
+  gap: 12px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.btn-row-link {
+  flex: 1;
+  display: block;
+}
+
+.btn-row-img {
+  width: 100%;
+  display: block;
+}
+
+/* =============================
+   GIF重ね表示（meta_08 + gif）
+============================= */
+.meta-gif-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.meta-gif-overlay {
+  position: absolute;
+  left: 8.9%;
+  top: 17.6%;
+  width: 82.5%;
+  pointer-events: none;
+}
+
+.meta-gif-overlay-2 {
+  position: absolute;
+  left: 8.9%;
+  top: 48.37%;
+  width: 82.5%;
+  pointer-events: none;
+}
+
+.meta-gif-overlay-3 {
+  position: absolute;
+  left: 8.9%;
+  top: 78.15%;
+  width: 82.5%;
+  pointer-events: none;
+}
+
+/* =============================
+   FAQ アコーディオン（meta_13a/b）
+============================= */
+.faq-accordion {
+  position: relative;
+  width: 100%;
+}
+
+.faq-question {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+.faq-q-img {
+  width: 100%;
+  display: block;
+}
+
+.faq-question {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* タップ時の水色枠を消す */
+.faq-question * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.faq-arrow-img {
+  position: absolute;
+  right: 4.8%;
+  top: 50%;
+  width: 2.8%;
+  height: auto;
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: center center;
+  transition: transform 0.35s ease;
+  pointer-events: none;
+  display: block;
+  object-fit: contain;
+  image-orientation: none;
+}
+
+.faq-arrow-img.is-open {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* 開く・閉じる：heightで正確にアニメーション */
+.faq-answer {
+  display: none;
+}
+
+.faq-answer.is-open {
+  opacity: 1;
+  /* heightはJSで直接セット */
+}
+
+/* =============================
+   スライダー共通
+============================= */
+.section-slider {
+  width: 100%;
+  position: relative;
+  margin-top: 0;
+}
+
+.section-hero {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.section-hero + .section-hero {
+  margin-top: 0;
+}
+
+.section-hero + .section-slider,
+.section-meta + .section-slider {
+  margin-top: 0;
+}
+
+.section-meta.mt-2 + .section-slider,
+.section-slider.mt-2 {
+  margin-top: var(--space-2);
+}
+
+/* 枠線付きアウター */
+.slider-outer {
+  position: relative;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* スライダーラッパー */
+.slider-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  user-select: none;
+}
+
+.slider-wrap:active {
+  cursor: grabbing;
+}
+
+/* スライダートラック */
+.slider-track {
+  display: flex;
+  will-change: transform;
+}
+
+/* スライド１枚 */
+.slider-track .slide-item {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* スライド内の画像 */
+.slider-track .slide-item .slide-item-img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* 前後ボタン */
+.slider-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 33.333%;
+  height: 100%;
+  transform: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding: 0 12px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slider-btn:active {
+  opacity: 0.7;
+}
+
+.slider-btn-img {
+  width: 28px;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.slider-btn-img-flip {
+  transform: scaleX(-1);
+}
+
+.slider-btn-prev {
+  left: 0;
+  justify-content: flex-start;
+}
+
+.slider-btn-next {
+  right: 0;
+  justify-content: flex-end;
+}
+
+/* ページ番号 */
+.slider-counter {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  padding: 6px 0 4px;
+  background: #fff;
+}
+
+/* ドット非表示 */
+.slider-dots {
+  display: none;
+}
+
+/* =============================
+   サムネイルストリップ
+============================= */
+.slider-thumbs {
+  display: flex;
+  overflow-x: auto;
+  gap: 3px;
+  padding: 3px 0;
+  background: #fff;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slider-thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-thumb {
+  flex: 0 0 calc(25% - 3px);
+  cursor: pointer;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  overflow: hidden;
+  background: #eee;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.slider-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.slider-thumb.is-active {
+  border-color: #c8002d;
+}
+
+.slider-thumb.is-active::after {
+  opacity: 0;
+}
+
+.slider-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* =============================
+   固定フッターナビ
+============================= */
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 640px;
+  z-index: 100;
+}
+
+.fixed-footer-img {
+  width: 100%;
+  display: block;
+}
+
+.fixed-footer-spacer {
+  height: 60px;
+}
+
+/* =============================
+   価格表モーダル（下からスライドアップ）
+============================= */
+.kakaku-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.kakaku-overlay.is-visible {
+  display: block;
+}
+
+.kakaku-overlay.is-active {
+  opacity: 1;
+}
+
+.kakaku-sheet {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  width: 100%;
+  max-width: 640px;
+  background: #fff;
+  z-index: 99;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.kakaku-sheet.is-active {
+  transform: translateX(-50%) translateY(0);
+}
+
+.kakaku-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eee;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  transition: background 0.2s;
+}
+
+.kakaku-close:active {
+  background: #ddd;
+}
+
+.kakaku-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 56px;
+  flex: 1;
+}
+
+.kakaku-img {
+  width: 100%;
+  display: block;
+}
+
+.kakaku-narrow {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.kakaku-map-wrap {
+  position: relative;
+}
+
+.kakaku-area {
+  position: absolute;
+  display: block;
+  background: transparent;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.08);
+}
+
+.sp-top-100 {
+  margin-top: 100px;
+}
+
+.sp-top-130 {
+  margin-top: 150px;
+}
+
+body.kakaku-open {
+  overflow: hidden;
+}
+
+/* =============================
+   スマホ対応
+============================= */
+@media (max-width: 640px) {
+  body {
+    max-width: 100%;
+  }
+}
+
+/* =============================
+   YouTube動画埋め込み
+============================= */
+.video-wrap {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 51%;
+  overflow: hidden;
+  border: 1px solid #000;
+  outline: 1px solid #000;
+  -webkit-box-shadow: 0 0 0 1px #000;
+  box-shadow: 0 0 0 1px #000;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
