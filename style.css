@@ -78,6 +78,7 @@ body {
 .sp-10  { margin-bottom: var(--space-10); }
 .sp-20  { margin-bottom: var(--space-20); }
 .sp-40  { margin-bottom: var(--space-40); }
+.sp-50  { margin-bottom: 50px; }
 .sp-60  { margin-bottom: var(--space-60); }
 .sp-80  { margin-bottom: 80px; }
 .sp-80  { margin-bottom: 80px; }
@@ -105,7 +106,8 @@ body {
 .meta-gif-wrap.sp-40,  .faq-accordion.sp-40,  .meta-narrow.sp-40  { margin-bottom: var(--space-40); }
 
 .btn-row.sp-60,  .meta-link.sp-60,  .section-slider.sp-60,
-.meta-gif-wrap.sp-60,  .faq-accordion.sp-60,  .meta-narrow.sp-60  { margin-bottom: var(--space-60); }
+.meta-gif-wrap.sp-60,  .faq-accordion.sp-60,  .meta-narrow.sp-50  { margin-bottom: 50px; }
+.sp-60  { margin-bottom: var(--space-60); }
 
 .btn-row.sp-100, .meta-link.sp-100, .section-slider.sp-100,
 .meta-gif-wrap.sp-100, .faq-accordion.sp-100, .meta-narrow.sp-80  { margin-bottom: 80px; }
