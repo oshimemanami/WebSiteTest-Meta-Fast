@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おくってフォトブック</title>
+  <link rel="preload" href="images/meta_start.webp" as="image">
+  <link rel="preload" href="images/google_01.webp" as="image">
+  <link rel="preload" href="images/slide_AB.webp" as="image">
+  <link rel="preload" href="images/slideA-01.webp" as="image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- meta_start -->
+  <section class="section-hero">
+    <img src="images/meta_start.webp" alt="" class="hero-img sp-0">
+  </section>
+
+  <!-- google_01 -->
+  <section class="section-hero">
+    <img src="images/google_01.webp" alt="" class="hero-img sp-2">
+  </section>
+
+  <!-- スライダーA -->
+  <section class="section-slider slider-a sp-40" id="sliderA-outer">
+    <div class="slider-outer">
+      <div class="slider-wrap" id="sliderA">
+        <div class="slider-track" id="sliderA-track"></div>
+      </div>
+      <button class="slider-btn slider-btn-prev" id="sliderA-prev" aria-label="前へ"><img src="images/slide_AB.webp" class="slider-btn-img" alt="前へ"></button>
+      <button class="slider-btn slider-btn-next" id="sliderA-next" aria-label="次へ"><img src="images/slide_AB.webp" class="slider-btn-img slider-btn-img-flip" alt="次へ"></button>
+    </div>
+    <div class="slider-counter" id="sliderA-counter">1 / 8</div>
+    <div class="slider-thumbs" id="sliderA-thumbs"></div>
+  </section>
+
+  <!-- google_02 sp-40 -->
+  <section class="section-meta">
+    <img src="images/google_02.png" alt="" class="meta-img sp-40" loading="lazy">
+
+    <!-- google_02c sp-10 -->
+    <img src="images/google_02c.png" alt="" class="meta-img sp-10" loading="lazy">
+
+    <!-- 隣同士ボタン -->
+    <div class="btn-row sp-40">
+      <a href="https://okutte.jp/soudanmadoguchi.html" class="btn-row-link">
+        <img src="images/meta_04a.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+      <a href="#" class="btn-row-link" id="btnKakaku04b">
+        <img src="images/meta_04b.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+    </div>
+
+    <!-- google_02d sp-2 -->
+    <img src="images/google_02d.webp" alt="" class="meta-img sp-2" loading="lazy">
+  </section>
+
+  <!-- スライダーB -->
+  <section class="section-slider slider-b sp-100 mt-2" id="sliderB-outer">
+    <div class="slider-outer">
+      <div class="slider-wrap" id="sliderB">
+        <div class="slider-track" id="sliderB-track"></div>
+      </div>
+      <button class="slider-btn slider-btn-prev" id="sliderB-prev" aria-label="前へ"><img src="images/slide_AB.webp" class="slider-btn-img" alt="前へ"></button>
+      <button class="slider-btn slider-btn-next" id="sliderB-next" aria-label="次へ"><img src="images/slide_AB.webp" class="slider-btn-img slider-btn-img-flip" alt="次へ"></button>
+    </div>
+    <div class="slider-counter" id="sliderB-counter">1 / 6</div>
+    <div class="slider-thumbs" id="sliderB-thumbs"></div>
+  </section>
+
+  <!-- google_03 -->
+  <section class="section-meta">
+    <div class="sp-80"></div>
+    <div class="kakaku-map-wrap">
+      <img src="images/google_03.webp" alt="" class="meta-img sp-80" loading="lazy">
+      <a href="https://okutte.shop/items/693a47d6a7f9cb093a86febc/" target="_blank" class="kakaku-area" style="left:20%;top:70%;width:60%;height:20%;"></a>
+    </div>
+    <img src="images/google_02c.png" alt="" class="meta-img sp-10" loading="lazy">
+    <div class="btn-row sp-80">
+      <a href="https://okutte.jp/soudanmadoguchi.html" class="btn-row-link">
+        <img src="images/meta_04a.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+      <a href="#" class="btn-row-link" id="btnKakaku06b">
+        <img src="images/meta_04b.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+    </div>
+    <div class="sp-80"></div>
+    <img src="images/google_03a.png" alt="" class="meta-img sp-130" loading="lazy">
+  </section>
+
+  <!-- meta_06〜meta_09 同じ流れ -->
+  <section class="section-meta sp-top-130" id="section-meta06">
+    <img src="images/meta_06.png" alt="" class="meta-img sp-10" loading="lazy">
+    <div class="btn-row sp-10">
+      <a href="https://okutte.jp/soudanmadoguchi.html" class="btn-row-link">
+        <img src="images/meta_04a.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+      <a href="#" class="btn-row-link" id="btnKakakuMid">
+        <img src="images/meta_04b.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+    </div>
+    <div class="sp-40"></div>
+    <img src="images/meta_05.png" alt="" class="meta-img sp-10" loading="lazy">
+    <a href="tel:0862460007" class="meta-link meta-narrow sp-20">
+      <img src="images/meta_05b.png" alt="" class="meta-img meta-img-90" loading="lazy">
+    </a>
+    <img src="images/meta_05c.png" alt="" class="meta-img sp-10" loading="lazy">
+    <a href="https://okutte.jp/soudanmadoguchi.html" class="meta-link meta-narrow sp-40">
+      <img src="images/meta_05d.png" alt="" class="meta-img meta-img-90" loading="lazy">
+    </a>
+    <img src="images/meta_05e.png" alt="" class="meta-img sp-10" loading="lazy">
+    <a href="tel:0862460007" class="meta-link meta-narrow sp-10">
+      <img src="images/meta_05f.png" alt="" class="meta-img meta-img-90" loading="lazy">
+    </a>
+    <img src="images/meta_05g.png" alt="" class="meta-img sp-130" loading="lazy">
+  </section>
+
+  <section class="section-meta sp-top-130" id="section-meta08">
+    <div class="meta-gif-wrap sp-130">
+      <img src="images/meta_08.png" alt="" class="meta-img" loading="lazy">
+      <img src="images/soft_mekuru-img.gif" alt="" class="meta-gif-overlay">
+      <img src="images/hard_mekuru-img.gif" alt="" class="meta-gif-overlay-2">
+      <img src="images/hb_mekuru-img.gif"   alt="" class="meta-gif-overlay-3">
+    </div>
+  </section>
+
+  <section class="section-meta" id="section-meta09">
+    <img src="images/meta_09.png" alt="" class="meta-img sp-130" loading="lazy">
+  </section>
+
+  <!-- google_07 sp-130 -->
+  <section class="section-meta">
+    <div class="sp-130"></div>
+    <img src="images/google_07.webp" alt="" class="meta-img sp-130" loading="lazy">
+  </section>
+
+  <!-- google_08 sp-10 + Quest5〜12 -->
+  <section class="section-meta">
+    <div class="sp-130"></div>
+    <img src="images/google_08.webp" alt="" class="meta-img sp-10" loading="lazy">
+
+    <!-- Quest5 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08a.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08b.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Quest6 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08e.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08f.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Quest7 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08g.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08h.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Quest8 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08i.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08j.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Quest9 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08k.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08l.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Quest10 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08m.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08n.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Quest11 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08o.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08p.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Quest12 -->
+    <div class="faq-accordion">
+      <div class="faq-question">
+        <img src="images/google_08q.png" alt="" class="meta-img faq-q-img sp-40" loading="lazy">
+        <img src="images/meta_17.png" alt="" class="faq-arrow-img">
+      </div>
+      <div class="faq-answer">
+        <img src="images/google_08r.png" alt="" class="meta-img sp-40" loading="lazy">
+      </div>
+    </div>
+
+    <!-- sp-100 meta_14 -->
+    <div class="sp-100"></div>
+    <img src="images/meta_14.png" alt="" class="meta-img sp-10" loading="lazy">
+
+    <!-- 隣同士ボタン -->
+    <div class="btn-row sp-40">
+      <a href="https://okutte.jp/soudanmadoguchi.html" class="btn-row-link">
+        <img src="images/meta_04a.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+      <a href="#" class="btn-row-link" id="btnKakaku14b">
+        <img src="images/meta_04b.png" alt="" class="btn-row-img" loading="lazy">
+      </a>
+    </div>
+
+    <!-- google_08d sp-10 -->
+    <img src="images/google_08d.webp" alt="" class="meta-img sp-10" loading="lazy">
+
+    <!-- meta_05b〜フッターまで -->
+    <a href="tel:0862460007" class="meta-link meta-narrow sp-20">
+      <img src="images/meta_05b.png" alt="" class="meta-img meta-img-90" loading="lazy">
+    </a>
+    <img src="images/meta_05c.png" alt="" class="meta-img sp-10" loading="lazy">
+    <a href="https://okutte.jp/soudanmadoguchi.html" class="meta-link meta-narrow sp-40">
+      <img src="images/meta_05d.png" alt="" class="meta-img meta-img-90" loading="lazy">
+    </a>
+    <img src="images/meta_05e.png" alt="" class="meta-img sp-10" loading="lazy">
+    <a href="tel:0862460007" class="meta-link meta-narrow sp-10">
+      <img src="images/meta_05f.png" alt="" class="meta-img meta-img-90" loading="lazy">
+    </a>
+    <img src="images/meta_16.webp" alt="" class="meta-img sp-100" loading="lazy">
+    <div class="video-wrap sp-10">
+      <iframe src="https://www.youtube.com/embed/RNCawqSbcok?si=U4eRDLy_1iSN0bRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <a href="https://okutte.jp/" class="meta-link meta-05a-narrow sp-60">
+      <img src="images/meta_05a.png" alt="" class="meta-img meta-img-90" loading="lazy">
+    </a>
+  </section>
+
+  <!-- meta_15 + フッター -->
+  <section class="section-meta">
+    <div class="meta-15-wrap sp-100">
+      <img src="images/meta_15.webp" alt="" class="meta-img" loading="lazy">
+      <a href="https://www.instagram.com/okuttephotobook/" target="_blank" class="meta-15b-link">
+        <img src="images/meta_15b.png" alt="" class="meta-15b-img" loading="lazy">
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="https://okutte.jp/" target="_blank" class="footer-link-item">ホームページ</a>
+      <a href="https://okutte.jp/company.html" target="_blank" class="footer-link-item">会社概要</a>
+      <a href="https://okutte.jp/puraibasi-porisi.html" target="_blank" class="footer-link-item">プライバシーポリシー</a>
+      <a href="https://okutte.jp/riyoukiyaku.html" target="_blank" class="footer-link-item">利用規約</a>
+      <a href="http://okutte.jp/tokuteisyoutorihiki.html" target="_blank" class="footer-link-item">特定商取引法に基づく表記</a>
+      <a href="https://okutte.shop/" target="_blank" class="footer-link-item">オンラインストア</a>
+      <a href="https://okutte.jp/contact.html" target="_blank" class="footer-link-item">お問い合わせ</a>
+      <div class="footer-info">
+        <p>写真整理代行サービス『おくってフォトブック』</p>
+        <p>TEL.086-246-0007</p>
+        <p>受付時間：平日10:00〜17:00　定休日：土日祝</p>
+      </div>
+      <p class="footer-copyright">Copyright 2020 basara ltd. All rights reserved.</p>
+    </div>
+  </section>
+
+  <!-- 固定フッター -->
+  <div class="fixed-footer" id="fixedFooter">
+    <img src="images/underver.png" alt="ナビゲーション" class="fixed-footer-img" usemap="#footerMap" id="footerImg">
+    <map name="footerMap">
+      <area shape="rect" coords="0,0,0,0" href="#section-meta06" alt="3つのコース" id="areaCorner">
+      <area shape="rect" coords="0,0,0,0" href="#section-meta08" alt="仕上がりタイプ" id="areaFinish">
+      <area shape="rect" coords="0,0,0,0" href="#section-meta09" alt="事例紹介" id="areaCase">
+      <area shape="rect" coords="0,0,0,0" href="https://okutte.jp/soudanmadoguchi.html" alt="お問い合わせ" id="areaContact">
+    </map>
+  </div>
+
+  <div class="fixed-footer-spacer"></div>
+
+  <!-- 価格表モーダル -->
+  <div class="kakaku-overlay" id="kakakuOverlay"></div>
+  <div class="kakaku-sheet" id="kakakuSheet">
+    <button class="kakaku-close" id="kakakuClose" aria-label="閉じる">✕</button>
+    <div class="kakaku-scroll">
+
+      <div style="height:20px;"></div>
+
+      <img src="" data-src="images/kakaku_01.png" alt="料金表" class="kakaku-img">
+
+      <div style="height:30px;"></div>
+
+      <img src="" data-src="images/kakaku_02.png" alt="" class="kakaku-img kakaku-narrow">
+
+      <div style="height:5px;"></div>
+
+      <!-- kakaku_self -->
+      <div class="kakaku-map-wrap kakaku-narrow">
+        <img src="" data-src="images/kakaku_self.png" alt="セルフコース価格表（プリント）" class="kakaku-img">
+        <a href="https://okutte.shop/items/693a0d6d3d43e4cf34cf7909/" class="kakaku-area" style="left:27.5%;top:24%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a42ce5a1afd9ba342a16f/" class="kakaku-area" style="left:27.5%;top:37%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a44dbb859d3ba00fd8f22/" class="kakaku-area" style="left:27.5%;top:50.37%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a4645b859d3dda4fd8f33/" class="kakaku-area" style="left:52.39%;top:24%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a473be0d478ecb60785d3/" class="kakaku-area" style="left:52.39%;top:37%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a47d6a7f9cb093a86febc/" class="kakaku-area" style="left:52.39%;top:50.37%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a48c3a7f9cb093a86ff1c/" class="kakaku-area" style="left:52.39%;top:64.41%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a49e4e0d47832d70785af/" class="kakaku-area" style="left:52.39%;top:77.45%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a4bbde35190569f892fea/" class="kakaku-area" style="left:52.39%;top:91.48%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a4c9810525192520a1324/" class="kakaku-area" style="left:77.46%;top:91.48%;width:20%;height:4%;"></a>
+      </div>
+
+      <div style="height:70px;"></div>
+
+      <img src="" data-src="images/kakaku_02.png" alt="" class="kakaku-img kakaku-narrow">
+
+      <div style="height:5px;"></div>
+
+      <!-- kakaku_half -->
+      <div class="kakaku-map-wrap kakaku-narrow">
+        <img src="" data-src="images/kakaku_half.png" alt="ハーフコース価格表" class="kakaku-img">
+        <a href="https://okutte.shop/items/693a4d711052518c350a136b/" class="kakaku-area" style="left:27.5%;top:24%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a4e65e0d4788ede0785d3/" class="kakaku-area" style="left:27.5%;top:37%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a4d8a5a1afdad4342a25c/" class="kakaku-area" style="left:27.5%;top:51%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a4ff2fafd8b0049f412ba/" class="kakaku-area" style="left:52%;top:24%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a5bfa60b203de9209c051/" class="kakaku-area" style="left:52%;top:37%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a5c4cbe2d12c3eb295132/" class="kakaku-area" style="left:52%;top:51%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a5c88be2d12dcf62950a6/" class="kakaku-area" style="left:52%;top:64%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a5e065106c209ba46d3db/" class="kakaku-area" style="left:52%;top:78.05%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a643b20ede136b74ec593/" class="kakaku-area" style="left:52%;top:91%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a64e0dfae5d3f21e5e214/" class="kakaku-area" style="left:77.46%;top:91%;width:20%;height:4%;"></a>
+      </div>
+
+      <div style="height:70px;"></div>
+
+      <img src="" data-src="images/kakaku_02a.png" alt="" class="kakaku-img">
+
+      <div style="height:100px;"></div>
+
+      <img src="" data-src="images/kakaku_03.png" alt="" class="kakaku-img">
+
+      <div style="height:30px;"></div>
+
+      <img src="" data-src="images/kakaku_02.png" alt="" class="kakaku-img kakaku-narrow">
+
+      <div style="height:5px;"></div>
+
+      <!-- kakaku_self-digital -->
+      <div class="kakaku-map-wrap kakaku-narrow">
+        <img src="" data-src="images/kakaku_self-digital.png" alt="セルフコース価格表（デジタル）" class="kakaku-img">
+        <a href="https://okutte.shop/items/693a657fdfae5d4004e5e1e9" class="kakaku-area" style="left:27.5%;top:23.70%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a65ede5a6e638d8964264/" class="kakaku-area" style="left:27.5%;top:37.6%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a67742390bc588425fdca/" class="kakaku-area" style="left:27.5%;top:50.6%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a67cde5a6e660de964270/" class="kakaku-area" style="left:52.5%;top:23.70%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a681895624d62b1fb47d2/" class="kakaku-area" style="left:52.5%;top:37.6%;width:20%;height:4%;"></a>
+        <a href="https:///okutte.shop/items/693a689a7c869173ea5e0fef/" class="kakaku-area" style="left:52.5%;top:50.6%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a6948979394845bad81b5/" class="kakaku-area" style="left:52.5%;top:64.41%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a69a3e5a6e6830296428d/" class="kakaku-area" style="left:52.5%;top:77.45%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a69e89793948fccad8194/" class="kakaku-area" style="left:52.5%;top:91%;width:20%;height:4%;"></a>
+        <a href="https://okutte.shop/items/693a6a39f06ae88d07510e8b/" class="kakaku-area" style="left:77.46%;top:91%;width:20%;height:4%;"></a>
+      </div>
+
+      <div style="height:70px;"></div>
+
+      <img src="" data-src="images/kakaku_03a.png" alt="" class="kakaku-img">
+
+      <div style="height:100px;"></div>
+
+      <img src="" data-src="images/kakaku_04.png" alt="" class="kakaku-img">
+
+      <div style="height:30px;"></div>
+
+      <img src="" data-src="images/kakaku_02.png" alt="" class="kakaku-img kakaku-narrow">
+
+      <div style="height:5px;"></div>
+
+      <!-- kakaku_option -->
+      <div class="kakaku-map-wrap kakaku-narrow">
+        <img src="" data-src="images/kakaku_option.png" alt="オプション価格表" class="kakaku-img">
+        <a href="https://okutte.shop/items/5f5f080393f61902b7165215/" class="kakaku-area" style="left:60%;top:9%;width:20%;height:6%;"></a>
+        <a href="https://okutte.shop/items/60f13a261b946c23cd3d051a/" class="kakaku-area" style="left:60%;top:35%;width:20%;height:6%;"></a>
+        <a href="https://okutte.shop/items/694ba519b5941f983960ef03/" class="kakaku-area" style="left:60%;top:62%;width:20%;height:6%;"></a>
+        <a href="https://okutte.shop/items/694ba57d393dc39b88b537ea/" class="kakaku-area" style="left:60%;top:85%;width:20%;height:6%;"></a>
+      </div>
+
+      <div style="height:150px;"></div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
