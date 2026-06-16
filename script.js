@@ -407,52 +407,6 @@ function initFooterNav() {
 /* =============================
    DOM読み込み後に初期化
 ============================= */
-
-/* =============================
-   GIF遅延読み込み（IntersectionObserver）
-============================= */
-function initLazyGif() {
-  const gifs = document.querySelectorAll('img[data-src]');
-  if (!gifs.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-        observer.unobserve(img);
-      }
-    });
-  }, { rootMargin: '200px' });
-
-  gifs.forEach(img => observer.observe(img));
-}
-
-/* =============================
-   YouTubeファサード
-============================= */
-function initYtFacade() {
-  document.querySelectorAll('.yt-facade').forEach(wrap => {
-    wrap.addEventListener('click', () => {
-      const id = wrap.dataset.videoid;
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
-      iframe.setAttribute('frameborder', '0');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-      iframe.style.position = 'absolute';
-      iframe.style.top = '0';
-      iframe.style.left = '-8%';
-      iframe.style.width = '116%';
-      iframe.style.height = '100%';
-      iframe.style.border = 'none';
-      wrap.innerHTML = '';
-      wrap.appendChild(iframe);
-    }, { once: true });
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   // 第1引数に slider-outer の ID を追加
   initSlider('sliderA-outer', 'sliderA', 'sliderA-track', 'sliderA-dots', 'sliderA-prev', 'sliderA-next', sliderAImages, 'sliderA-counter', 'sliderA-thumbs');
@@ -460,6 +414,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initKakakuModal();
   initFaqAccordion();
   initFooterNav();
-  initLazyGif();
-  initYtFacade();
 });
